@@ -1,36 +1,15 @@
-# NilExample
-A small example for getting started with NilLoader.
+# Antisplash
 
-## A quick note
-NilLoader is not a general purpose loader intended to replace Fabric or Forge.
-If you're here, you should either have a specific use case (e.g. wanting to
-patch mods on old versions with broken tooling) or just want to mess around with
-a new toy for the sake of it.
+I have a splashes.txt, full of custom text, and mods don't let you disable the custom splashes that *they* add. Why can I not disable them??? Oh, I know, I need a mod for... mods, that disables them from modding Minecraft!
 
-Additionally, NilLoader is currently *experimental* and ***API/ABI stability is
-not yet guaranteed***.
+Currently supported mods are: [Interference](https://github.com/magistermaks/mod-interference), and [Lib39](https://git.sleeping.town/unascribed/Lib39).
 
-If you're okay with that, then cool. Let's continue.
+If you come across a mod that adds splashes with *no* way of disabling them, let me know.
 
-## Steps to use the template
-1. You must pick a unique nilmod ID and put it in build.gradle. You will then
-	have to rename src/main/resources/modid.nilmod.css to use your ID.
-2. You need to rename the package from com.example.nilexample to a package
-	you have permission to use; see [this wizard](https://unascribed.com/old/javapkg.html)
-	for help if you don't know what a good package name is.
-3. You will probably want to replace LICENSE with something else, unless CC0
-	Public Domain Dedication is what you want.
+## Installation and Usage
 
-## How do I launch a development environment?
-NilGradle does not currently (and likely never will) offer a dev environment. In
-the future, NilLoader may gain the ability to be run a normal game in dev mode
-and then be attached to an IDE for code hotswap. **You will have to restart the
-game every time you make changes to your mod**.
+To build Antisplash once, run `./gradlew --no-daemon build` in a POSIX compliant shell. The mod jar will be at `build/libs/`.
 
-## How do I decompile the game?
-Pass `-Pnil.decompile` when running your initial Gradle command to generate a
-sources jar. You may need to delete `build/nil`.
+Antisplash is a standalone nilmod, that means it has [NilLoader](https://git.sleeping.town/unascribed/NilLoader) embbed into it, and it can be used the same was as the loader is. If you don't have NilLoader, installation is the same as NilLoader itself: add `-javaagent:'/path/to/Antisplash-1.0.jar'` to your Java arguments.
 
-## Another note
-NilGradle is very primitive at the moment, and can quite easily get confused.
-If things don't make sense, then delete `build/nil`.
+If you have NilLoader installed by itself, you can simply place it in the `mods/` or `nilmods/` folder.
