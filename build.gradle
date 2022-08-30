@@ -7,8 +7,8 @@ plugins {
 sourceCompatibility = 8
 targetCompatibility = 8
 
-group = 'com.example'
-archivesBaseName = 'NilExample'
+group = 'hibi.antisplash'
+archivesBaseName = 'Antisplash'
 version = '1.0'
 
 repositories {
@@ -37,7 +37,7 @@ repositories {
 }
 
 nil {
-	id "modid"
+	id "antisplash"
 	// Set this to false for a smaller JAR that can't be run as a standalone Java agent
 	standalone true
 }
@@ -46,7 +46,7 @@ dependencies {
 	loader 'com.unascribed:nilloader:1.2.2'
 
 	// Any version available in the vanilla launcher can be put here, or...
-	game nil.minecraft('1.4.7', 'client')
+	game nil.minecraft('1.19.2', 'client')
 	// ...you can use any version that's been archived in the IA by OmniArchive
 	//game nil.minecraftArchive('alpha', 'a1.1.1')
 	// Or, you can use something that isn't Minecraft with a normal Gradle dependency.
