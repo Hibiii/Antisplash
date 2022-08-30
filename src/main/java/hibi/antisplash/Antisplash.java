@@ -9,6 +9,7 @@ public class Antisplash implements Runnable {
 	public void run() {
 		ModRemapper.setTargetMapping("default");
 		ClassTransformer.register(new DarktreeInterferenceTransformer());
+		ClassTransformer.register(new UnascribedLib39Transformer());
 	}
 
 }
